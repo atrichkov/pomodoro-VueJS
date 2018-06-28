@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+        <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+        <link rel="stylesheet" href="styles/custom.css">
+        <title>Vue js introduction</title>
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-material@beta"></script>
+    </head>
+    <body>
+      <div id="app">
+        <div class="root" v-bind:style="styleObject">
+          <section>
+              <template>
+                <div>
+                  <md-progress-bar class="md-accent" md-mode="determinate" :md-value="amount"></md-progress-bar>
+                  <md-button class="md-raised md-primary" v-on:click="start">{{ buttonText }}</md-button>
+                </div>
+              </template>
+          </section>
+        </div>
+      </div>
+      <style lang="scss" scoped>
+          .md-progress-bar {
+            width: 500px;
+            height: 30px;
+          }
+        </style>
+      <script src="index.js"></script>
+    </body>
+</html>
